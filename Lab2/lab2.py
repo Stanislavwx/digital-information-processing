@@ -170,7 +170,8 @@ def run_continuous_signals():
 
     plt.tight_layout()
     plt.savefig('figures/continuous_individual.png', dpi=300)
-    plt.close()
+    print("  -> Відображення на екрані: Рис. 1 (Окремі операції над неперервним сигналом)...")
+    plt.show()
 
     # 2. Зведений графік усіх перетворень (як у додатку)
     plt.figure(figsize=(10, 5.5))
@@ -186,7 +187,8 @@ def run_continuous_signals():
     plt.legend(loc='upper right')
     plt.tight_layout()
     plt.savefig('figures/continuous_summary.png', dpi=300)
-    plt.close()
+    print("  -> Відображення на екрані: Рис. 2 (Зведений графік неперервних перетворень)...")
+    plt.show()
 
     # 3. Накладання неперервних сигналів: додавання та множення
     gen2 = Signal()
@@ -215,7 +217,8 @@ def run_continuous_signals():
 
     plt.tight_layout()
     plt.savefig('figures/continuous_superposition.png', dpi=300)
-    plt.close()
+    print("  -> Відображення на екрані: Рис. 3 (Накладання неперервних сигналів: додавання та множення)...")
+    plt.show()
 
 
 # =====================================================================
@@ -337,7 +340,8 @@ def run_discrete_signals():
 
     plt.tight_layout()
     plt.savefig('figures/discrete_operations.png', dpi=300)
-    plt.close()
+    print("  -> Відображення на екрані: Рис. 4 (Базові дискретні операції та децимація)...")
+    plt.show()
 
     # 2. Накладання дискретних сигналів (додавання та множення)
     # Другий сигнал: синусоїда на інтервалі [0, 12]
@@ -372,16 +376,19 @@ def run_discrete_signals():
 
     plt.tight_layout()
     plt.savefig('figures/discrete_superposition.png', dpi=300)
-    plt.close()
+    print("  -> Відображення на екрані: Рис. 5 (Накладання дискретних сигналів: додавання та множення)...")
+    plt.show()
 
 
 def main():
     print("=====================================================")
     print("  Лабораторна робота №2: ОСНОВНІ ОПЕРАЦІЇ НАД СИГНАЛАМИ")
     print("=====================================================")
+    print("Графіки будуть почергово виводитися на екран.")
+    print("Закрийте поточне вікно графіка, щоб перейти до наступного.\n")
     run_continuous_signals()
     run_discrete_signals()
-    print("-> Усі графіки успішно згенеровано та збережено у папку 'figures/'.")
+    print("-> Усі графіки успішно продемонстровано на екрані!")
     print("Готово!")
 
 
